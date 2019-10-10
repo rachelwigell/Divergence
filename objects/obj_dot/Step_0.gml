@@ -4,8 +4,8 @@ if keyboard_check(vk_left){
 	x = room_width/2 + dcos(pos_angle) * pos_radius;
 	y = room_height/2 - dsin(pos_angle) * pos_radius;
 	image_angle = pos_angle + 90;
-	camera_set_view_angle(view_camera[0], pos_angle+90);
 	camera_set_view_pos(view_camera[0], x-150, y-150);
+	camera_set_view_angle(view_camera[0], -pos_angle-90);
 	
 }
 
@@ -15,6 +15,6 @@ if keyboard_check(vk_right){
 	x = room_width/2 + dcos(pos_angle) * pos_radius;
 	y = room_height/2 - dsin(pos_angle) * pos_radius;
 	image_angle = pos_angle + 90;
-	camera_set_view_angle(view_camera[0], pos_angle+90);
 	camera_set_view_pos(view_camera[0], x-150, y-150);
+	camera_set_view_angle(view_camera[0], -pos_angle-90);
 }
