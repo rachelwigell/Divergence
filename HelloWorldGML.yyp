@@ -71,10 +71,18 @@
             }
         },
         {
-            "Key": "3964073d-d07f-400f-bf41-5065c2c7f3a1",
+            "Key": "38f7b141-f0ec-4d60-b88c-6c9ce9d7d9c5",
             "Value": {
-                "id": "2da17f20-3a3a-4a05-83b7-5d934bd4294d",
-                "resourcePath": "sprites\/spr_wall\/spr_wall.yy",
+                "id": "9614ac6f-cf77-44dd-83dc-a7737be1a1bc",
+                "resourcePath": "objects\/obj_ledge\/obj_ledge.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "3d50a5ff-63c0-482a-a32f-69d703156e49",
+            "Value": {
+                "id": "9c958f5a-1c30-4145-8cd2-f42e0bbe47bb",
+                "resourcePath": "sprites\/spr_ledge\/spr_ledge.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -92,6 +100,22 @@
                 "id": "94265c12-2afd-4f8e-bca6-4a3841b3c31f",
                 "resourcePath": "views\/5019c380-7cee-4ca7-8385-39dff388a82b.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "560780a8-57d9-4478-b737-d2b4450ed4d6",
+            "Value": {
+                "id": "fc8d5bb1-e75f-4857-9ea3-acf04c7fcdb2",
+                "resourcePath": "sprites\/spr_ladder\/spr_ladder.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "56f8a89e-ac1d-476d-9cff-599b9d37fddd",
+            "Value": {
+                "id": "06d7cc50-c2b0-4b70-b1b5-c1488125bc34",
+                "resourcePath": "objects\/obj_ladder\/obj_ladder.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -191,6 +215,14 @@
             }
         },
         {
+            "Key": "efa4dd9d-64cf-456a-b5dc-45ca41022b68",
+            "Value": {
+                "id": "61d4ca7c-10e5-4f5e-bda3-3e3b22780741",
+                "resourcePath": "scripts\/is_on_ground\/is_on_ground.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "9ecedccb-692c-4915-af69-f0d3621b4fd1",
@@ -216,7 +248,8 @@
         }
     ],
     "script_order": [
-        "e116e029-f376-414e-a551-ccfb3f3efad1"
+        "e116e029-f376-414e-a551-ccfb3f3efad1",
+        "efa4dd9d-64cf-456a-b5dc-45ca41022b68"
     ],
     "tutorial": ""
 }

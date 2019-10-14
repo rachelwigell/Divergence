@@ -1,6 +1,8 @@
 pos_angle = 270;
 pos_radius = 400;
-coordinates = convert_polar(pos_angle, pos_radius);
+obj_depth = 0;
+on_ground = true;
+coordinates = convert_polar(pos_angle, pos_radius, obj_depth);
 x = coordinates[0];
 y = coordinates[1];
 image_angle = coordinates[2];
