@@ -42,7 +42,7 @@
             "Key": "1aa7d9a3-d333-4f5e-8da4-fe1dd478c633",
             "Value": {
                 "id": "0e02a498-9c47-4592-8067-ce12d73112be",
-                "resourcePath": "objects\/obj_dot\/obj_dot.yy",
+                "resourcePath": "objects\/obj_niko\/obj_niko.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "e9d51269-3b13-47f4-8254-d92edcb30f94",
+            "Value": {
+                "id": "fdcef811-1b43-4f08-9b55-ba1fa6d0f7b5",
+                "resourcePath": "sprites\/spr_nikofront\/spr_nikofront.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ef549aa3-3c0d-4851-9920-9d9187954826",
             "Value": {
                 "id": "dc660151-ad96-4cc3-8f22-9c93d681b354",
@@ -218,7 +226,7 @@
             "Key": "efa4dd9d-64cf-456a-b5dc-45ca41022b68",
             "Value": {
                 "id": "61d4ca7c-10e5-4f5e-bda3-3e3b22780741",
-                "resourcePath": "scripts\/is_on_ground\/is_on_ground.yy",
+                "resourcePath": "scripts\/is_on_floor\/is_on_floor.yy",
                 "resourceType": "GMScript"
             }
         },
