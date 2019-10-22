@@ -3,7 +3,8 @@
 /// @param {real} radius
 /// @param {real} obj_depth
 
-WALL_RADIUS = 400;
+SCALE_FACTOR = 300;
+CAMERA_SHIFT = global.WALL_RADIUS/5;
 angle = argument0;
 radius = argument1;
 obj_depth = argument2;
@@ -20,11 +21,11 @@ sprite_angle = angle + 90;
 coordinates[2] = sprite_angle;
 
 // calculate the sprite's scale
-sprite_scale = 1 + obj_depth/30;
+sprite_scale = 1 + obj_depth/SCALE_FACTOR;
 coordinates[3] = sprite_scale;
 
 // calculate the camera settings
-camera_radius = min(radius - 75, WALL_RADIUS - 75);
+camera_radius = min(radius - CAMERA_SHIFT, global.WALL_RADIUS - CAMERA_SHIFT);
 camera_x = room_width/2 + dcos(angle) * camera_radius;
 camera_x -= camera_get_view_width(view_camera[0])/2;
 camera_y = room_height/2 - dsin(angle) * camera_radius;
