@@ -53,7 +53,6 @@ if(not on_floor and not on_ladder and not on_ledge){
 }
 
 // apply velocity
-//pos_radius += vel_radius;
 pos_radius = min(pos_radius+vel_radius, obj_depth+global.WALL_RADIUS);
 pos_angle += vel_angle;
 

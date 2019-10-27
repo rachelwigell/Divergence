@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0126a371-a343-4eda-9c23-0dda3536ac1f",
+            "Value": {
+                "id": "7d8e9e68-2221-4ddf-9be0-68329190ff76",
+                "resourcePath": "objects\/obj_wall\/obj_wall.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "01d7f618-6acc-4dca-81d0-242a9df59a94",
             "Value": {
                 "id": "5c5766bd-612e-4517-ae1e-71e6294b830d",
@@ -71,22 +79,6 @@
             }
         },
         {
-            "Key": "38f7b141-f0ec-4d60-b88c-6c9ce9d7d9c5",
-            "Value": {
-                "id": "9614ac6f-cf77-44dd-83dc-a7737be1a1bc",
-                "resourcePath": "objects\/obj_ledge\/obj_ledge.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "3d50a5ff-63c0-482a-a32f-69d703156e49",
-            "Value": {
-                "id": "9c958f5a-1c30-4145-8cd2-f42e0bbe47bb",
-                "resourcePath": "sprites\/spr_ledge\/spr_ledge.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "4c5d9493-e2d4-4376-afe7-897e97964acb",
             "Value": {
                 "id": "d7398bac-879c-4d58-ac3b-d9b257e0a10e",
@@ -100,22 +92,6 @@
                 "id": "94265c12-2afd-4f8e-bca6-4a3841b3c31f",
                 "resourcePath": "views\/5019c380-7cee-4ca7-8385-39dff388a82b.yy",
                 "resourceType": "GMFolder"
-            }
-        },
-        {
-            "Key": "560780a8-57d9-4478-b737-d2b4450ed4d6",
-            "Value": {
-                "id": "fc8d5bb1-e75f-4857-9ea3-acf04c7fcdb2",
-                "resourcePath": "sprites\/spr_ladder\/spr_ladder.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "56f8a89e-ac1d-476d-9cff-599b9d37fddd",
-            "Value": {
-                "id": "06d7cc50-c2b0-4b70-b1b5-c1488125bc34",
-                "resourcePath": "objects\/obj_ladder\/obj_ladder.yy",
-                "resourceType": "GMObject"
             }
         },
         {
