@@ -1,4 +1,4 @@
-/// @function convert_polar(angle, radius)
+/// @function convert_polar(angle, radius, obj_depth)
 /// @param {real} angle
 /// @param {real} radius
 /// @param {real} obj_depth

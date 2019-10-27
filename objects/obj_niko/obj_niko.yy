@@ -133,20 +133,6 @@
             "varType": 3
         },
         {
-            "id": "b6ccbc05-810b-4be1-8070-f5e732da4c05",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "obj_depth",
-            "varType": 0
-        },
-        {
             "id": "997ca4f7-c7e1-4fc8-83b6-ca6758f4f29d",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
@@ -173,6 +159,20 @@
             "value": "0",
             "varName": "on_ledge",
             "varType": 3
+        },
+        {
+            "id": "fd951dfd-a3be-4aa7-9328-970ce81bacbf",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "obj_depth",
+            "varType": 0
         }
     ],
     "solid": false,
