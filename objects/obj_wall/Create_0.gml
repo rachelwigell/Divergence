@@ -1,5 +1,5 @@
-x = global.ROOM_WIDTH/2;
-y = global.ROOM_WIDTH/2;
+x = room_width/2;
+y = room_height/2;
 depth = 2;
 
 // list of all the ladders in the room

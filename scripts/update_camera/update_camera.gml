@@ -1,13 +1,11 @@
-/// @function update_camera(angle, radius, obj_depth)
+/// @function update_camera(angle, radius)
 /// @param {real} angle
 /// @param {real} radius
-/// @param {real} obj_depth
 
 var CAMERA_SHIFT = global.WALL_RADIUS/5;
 
 var angle = argument0;
 var radius = argument1;
-var obj_depth = argument2;
 
 var camera_radius = min(radius - CAMERA_SHIFT, global.WALL_RADIUS - CAMERA_SHIFT);
 var camera_x = room_width/2 + dcos(angle) * camera_radius;

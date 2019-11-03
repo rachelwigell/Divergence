@@ -55,7 +55,7 @@ if(not on_floor and not on_ladder and not on_ledge){
 pos_radius = min(pos_radius+vel_radius, obj_depth+global.WALL_RADIUS);
 pos_angle += vel_angle;
 
-// update sprite position, angle; camera settings
+// update sprite position, angle
 depth = -obj_depth;
 var coordinates = convert_polar(pos_angle, pos_radius, obj_depth);
 x = coordinates[0];
