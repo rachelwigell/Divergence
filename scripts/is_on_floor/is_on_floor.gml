@@ -2,13 +2,13 @@
 /// @param {real} pos_radius
 /// @param {real} obj_depth
 
-radius = argument0;
+var radius = argument0;
 
 if(radius < global.WALL_RADIUS){
 	return false;
 }
 
 radius -= global.WALL_RADIUS;
-obj_depth = argument1;
+var obj_depth = argument1;
 
 return radius >= obj_depth;

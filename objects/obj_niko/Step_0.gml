@@ -1,7 +1,6 @@
-MAX_RADIUS = global.WALL_RADIUS + global.WALL_RADIUS/6;
-RADIUS_INCREMENT = global.WALL_RADIUS/800;
-ANGLE_INCREMENT = 500/global.WALL_RADIUS;
-GRAVITY_FACTOR = global.WALL_RADIUS * 4;
+var RADIUS_INCREMENT = global.WALL_RADIUS/800;
+var ANGLE_INCREMENT = 500/global.WALL_RADIUS;
+var GRAVITY_FACTOR = global.WALL_RADIUS * 4;
 
 if(on_floor or on_ledge or on_ladder){
 	vel_radius = 0;
@@ -29,7 +28,7 @@ if(on_floor or on_ledge or on_ladder){
 	}
 
 	if keyboard_check(vk_down){
-		if(pos_radius < MAX_RADIUS){
+		if(pos_radius < global.MAX_RADIUS){
 			if(on_floor or on_ladder){
 				pos_radius += RADIUS_INCREMENT;
 			}
@@ -47,7 +46,7 @@ if(on_floor or on_ledge or on_ladder){
 
 
 // apply gravity
-gravity_force = pos_radius/GRAVITY_FACTOR;
+var gravity_force = pos_radius/GRAVITY_FACTOR;
 if(not on_floor and not on_ladder and not on_ledge){
 	vel_radius += gravity_force;
 }
@@ -58,18 +57,12 @@ pos_angle += vel_angle;
 
 // update sprite position, angle; camera settings
 depth = -obj_depth;
-coordinates = convert_polar(pos_angle, pos_radius, obj_depth);
+var coordinates = convert_polar(pos_angle, pos_radius, obj_depth);
 x = coordinates[0];
 y = coordinates[1];
 image_angle = coordinates[2];
 image_xscale = coordinates[3];
 image_yscale = coordinates[3];
-camera_set_view_pos(
-	view_camera[0],
-	coordinates[4],
-	coordinates[5]
-);
-camera_set_view_angle(view_camera[0], coordinates[6]);
 on_floor = is_on_floor(pos_radius, obj_depth);
 on_ladder = false;
 on_ledge = false;
