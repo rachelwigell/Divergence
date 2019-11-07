@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
+            "Value": {
+                "id": "e2e1e15b-f106-4101-a6a0-d1171e66a6ec",
+                "resourcePath": "options\/linux\/options_linux.yy",
+                "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
             "Key": "ab88e766-2f60-4af9-a6fd-b168d089ba79",
             "Value": {
                 "id": "bc0ba75f-c321-4904-b067-d32019bef683",
@@ -220,6 +228,14 @@
                 "id": "1d4ce520-b48b-4ebe-985e-14a2595b7ad2",
                 "resourcePath": "objects\/obj_game\/obj_game.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
+            "Value": {
+                "id": "98386399-61db-4a23-b909-73fbee0cef56",
+                "resourcePath": "options\/windows\/options_windows.yy",
+                "resourceType": "GMWindowsOptions"
             }
         },
         {

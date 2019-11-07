@@ -2,54 +2,29 @@ var RADIUS_INCREMENT = global.WALL_RADIUS/800;
 var ANGLE_INCREMENT = 500/global.WALL_RADIUS;
 var GRAVITY_FACTOR = global.WALL_RADIUS * 4;
 
-if(on_floor or on_ledge or on_ladder){
-	vel_radius = 0;
-	vel_angle = 0;
-}
+// stop velocity if not falling
+var is_falling = not on_floor and not on_ladder and not on_ledge;
+vel_radius *= is_falling;
+vel_angle *= is_falling;
 
 // register inputs
-if(on_floor or on_ledge or on_ladder){
-	if keyboard_check(vk_left){
-		vel_angle -= ANGLE_INCREMENT;
-	}
-
-	if keyboard_check(vk_right){
-		vel_angle += ANGLE_INCREMENT;
-	}
-
-	if keyboard_check(vk_up){
-		if(on_floor){
-			pos_radius -= RADIUS_INCREMENT;
-			obj_depth = max(0, obj_depth-RADIUS_INCREMENT);
-		}
-		else if(on_ladder){
-			pos_radius -= RADIUS_INCREMENT*2;
-		}
-	}
-
-	if keyboard_check(vk_down){
-		if(pos_radius < global.MAX_RADIUS){
-			if(on_floor or on_ladder){
-				pos_radius += RADIUS_INCREMENT;
-			}
-			if(on_floor and pos_radius > global.WALL_RADIUS){
-				obj_depth += RADIUS_INCREMENT;
-			}
-		}
-		
-	}
-
-	if keyboard_check_pressed(vk_space){
-		vel_radius -= RADIUS_INCREMENT*5;
-	}
+if not is_falling {
+	var move_left = keyboard_check(vk_left);
+	var move_right = keyboard_check(vk_right);
+	var move_up = keyboard_check(vk_up);
+	var move_down = keyboard_check(vk_down) and pos_radius < global.MAX_RADIUS;
+	var jump = keyboard_check_pressed(vk_space);
+	
+	vel_angle += (move_right - move_left) * ANGLE_INCREMENT;
+	pos_radius += on_floor * (move_down - move_up) * RADIUS_INCREMENT;
+	obj_depth = max(obj_depth + (move_down - move_up) * RADIUS_INCREMENT * on_floor, 0)
+	pos_radius += on_ladder * (move_down - move_up) * RADIUS_INCREMENT*2;
+	vel_radius -= jump * RADIUS_INCREMENT*5;
 }
-
 
 // apply gravity
 var gravity_force = pos_radius/GRAVITY_FACTOR;
-if(not on_floor and not on_ladder and not on_ledge){
-	vel_radius += gravity_force;
-}
+vel_radius += is_falling * gravity_force;
 
 // apply velocity
 pos_radius = min(pos_radius+vel_radius, obj_depth+global.WALL_RADIUS);
