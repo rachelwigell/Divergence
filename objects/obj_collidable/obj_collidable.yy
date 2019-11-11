@@ -1,19 +1,10 @@
 {
-    "id": "0126a371-a343-4eda-9c23-0dda3536ac1f",
+    "id": "6573c0b7-26c2-4997-b39c-2c3828fc7dd6",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_wall",
+    "name": "obj_collidable",
     "eventList": [
-        {
-            "id": "0008339b-3141-4be0-94e4-3a950ec1d936",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "0126a371-a343-4eda-9c23-0dda3536ac1f"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
@@ -33,7 +24,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "090d12ba-223f-4bb4-aa0d-279f1656f7b8",
+            "id": "9505b9a1-07e4-4b33-a5fe-f7802c7c3fb0",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -43,11 +34,11 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "0",
-            "varName": "ladder_locations",
-            "varType": 4
+            "varName": "pos_angle",
+            "varType": 0
         },
         {
-            "id": "5fc438f3-36d2-4ad6-909c-73baae953a5b",
+            "id": "ab3061df-defd-4490-bf44-003b1181c4a9",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -57,8 +48,36 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "0",
-            "varName": "ledge_locations",
-            "varType": 4
+            "varName": "width",
+            "varType": 0
+        },
+        {
+            "id": "c851b531-0041-40f7-b94b-acf27bddc227",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "bottom_radius",
+            "varType": 0
+        },
+        {
+            "id": "56aeff8d-b2ef-47f3-910b-27c8249f9df3",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "height",
+            "varType": 0
         }
     ],
     "solid": false,
