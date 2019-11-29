@@ -25,16 +25,6 @@
             "m_owner": "1aa7d9a3-d333-4f5e-8da4-fe1dd478c633"
         },
         {
-            "id": "8136766d-b804-4798-97a2-f58c2113ba82",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "0126a371-a343-4eda-9c23-0dda3536ac1f",
-            "enumb": 0,
-            "eventtype": 4,
-            "m_owner": "1aa7d9a3-d333-4f5e-8da4-fe1dd478c633"
-        },
-        {
             "id": "99d97bee-9d04-459d-853a-f3567655769a",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -117,48 +107,6 @@
             "value": "0",
             "varName": "vel_angle",
             "varType": 0
-        },
-        {
-            "id": "23270862-408e-445b-b067-fe985c948036",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "False",
-            "varName": "on_floor",
-            "varType": 3
-        },
-        {
-            "id": "997ca4f7-c7e1-4fc8-83b6-ca6758f4f29d",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "on_ladder",
-            "varType": 3
-        },
-        {
-            "id": "5cf7eb65-5726-414d-b757-d6ff0ebbb6df",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "on_ledge",
-            "varType": 3
         }
     ],
     "solid": false,
