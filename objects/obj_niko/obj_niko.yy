@@ -159,20 +159,6 @@
             "value": "0",
             "varName": "on_ledge",
             "varType": 3
-        },
-        {
-            "id": "fd951dfd-a3be-4aa7-9328-970ce81bacbf",
-            "modelName": "GMObjectProperty",
-            "mvc": "1.0",
-            "listItems": null,
-            "multiselect": false,
-            "rangeEnabled": false,
-            "rangeMax": 10,
-            "rangeMin": 0,
-            "resourceFilter": 1023,
-            "value": "0",
-            "varName": "obj_depth",
-            "varType": 0
         }
     ],
     "solid": false,

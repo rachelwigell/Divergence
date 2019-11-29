@@ -12,12 +12,11 @@ if not is_falling {
 	var move_left = keyboard_check(vk_left);
 	var move_right = keyboard_check(vk_right);
 	var move_up = keyboard_check(vk_up);
-	var move_down = keyboard_check(vk_down) and pos_radius < global.MAX_RADIUS;
+	var move_down = keyboard_check(vk_down) and pos_radius < global.WALL_RADIUS;
 	var jump = keyboard_check_pressed(vk_space);
 	
 	vel_angle += (move_right - move_left) * ANGLE_INCREMENT;
 	pos_radius += on_floor * (move_down - move_up) * RADIUS_INCREMENT;
-	obj_depth = max(obj_depth + (move_down - move_up) * RADIUS_INCREMENT * on_floor, 0)
 	pos_radius += on_ladder * (move_down - move_up) * RADIUS_INCREMENT*2;
 	vel_radius -= jump * RADIUS_INCREMENT*5;
 }
@@ -31,13 +30,9 @@ pos_radius = min(pos_radius+vel_radius, obj_depth+global.WALL_RADIUS);
 pos_angle += vel_angle;
 
 // update sprite position, angle
-depth = -obj_depth;
-var coordinates = convert_polar(pos_angle, pos_radius, obj_depth);
+var coordinates = convert_polar(pos_angle, pos_radius);
 x = coordinates[0];
 y = coordinates[1];
 image_angle = coordinates[2];
-image_xscale = coordinates[3];
-image_yscale = coordinates[3];
-on_floor = is_on_floor(pos_radius, obj_depth);
-on_ladder = false;
-on_ledge = false;
+
+on_floor = pos_radius >= global.WALL_RADIUS;

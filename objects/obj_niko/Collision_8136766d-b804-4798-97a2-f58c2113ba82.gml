@@ -10,6 +10,9 @@ for (var i=0; i<array_length_1d(other.ladder_locations); i++) {
 	  pos_radius >= ladder_top){
 		on_ladder = true;
    }
+   else{
+	   on_ladder = false;
+   }
 }
 
 //check for collisions with ledges
@@ -24,4 +27,7 @@ for (var i=0; i<array_length_1d(other.ledge_locations); i++) {
 	  pos_radius + global.LEDGE_TOLERANCE >= ledge_radius){
 		on_ledge = true;
    }
+   else{
+	   on_ledge = false;
+   } 
 }

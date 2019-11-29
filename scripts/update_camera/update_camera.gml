@@ -2,7 +2,7 @@
 /// @param {real} angle
 /// @param {real} radius
 
-var CAMERA_SHIFT = global.WALL_RADIUS/5;
+var CAMERA_SHIFT = global.WALL_RADIUS/4;
 
 var angle = argument0;
 var radius = argument1;
