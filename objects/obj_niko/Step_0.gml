@@ -44,26 +44,27 @@ for (var i=0; i<array_length_1d(wall.ledge_locations); i++) {
 // stop velocity if not falling
 var is_falling = not on_floor and not on_ladder and not on_ledge;
 if is_falling{
-	var angle_deceleration_factor = .99;
+	var angle_deceleration_factor = 1;
+	var acceleration_control_factor = .3;
 }
 else{
 	var angle_deceleration_factor = .8;
+	var acceleration_control_factor = 1;
 }
-	
 vel_radius *= is_falling;
 
 // register inputs
-
 var move_left = keyboard_check(vk_left);
 var move_right = keyboard_check(vk_right);
 var move_up = keyboard_check(vk_up) and on_ladder;
 var move_down = keyboard_check(vk_down) and pos_radius < global.WALL_RADIUS;
 var jump = keyboard_check_pressed(vk_space);
 	
-vel_angle = clamp(vel_angle*angle_deceleration_factor + (move_right - move_left) * ANGLE_INCREMENT, -MAX_VEL_ANGLE, MAX_VEL_ANGLE);
+vel_angle = clamp(vel_angle*angle_deceleration_factor +
+	(move_right - move_left)*acceleration_control_factor*ANGLE_INCREMENT,
+	-MAX_VEL_ANGLE, MAX_VEL_ANGLE);
 pos_radius += (move_down - move_up) * RADIUS_INCREMENT*2;
 vel_radius -= jump * RADIUS_INCREMENT*5;
-
 
 // apply gravity
 var gravity_force = pos_radius/GRAVITY_FACTOR;
