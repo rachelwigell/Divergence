@@ -15,7 +15,7 @@ with(obj_niko){
 		pos_radius *= -1;
 		pos_angle += 180;
 		vel_radius *= -1;
-		headfirst = true;
+		set_headfirst(true);
 	}
 	if(pos_angle >= 360){
 		pos_angle -= 360;

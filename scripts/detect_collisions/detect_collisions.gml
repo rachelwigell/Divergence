@@ -7,12 +7,21 @@ with(obj_wall){
 
 with(obj_niko){	
 	
+	// set collision point
+	if(headfirst){
+		var collision_pos = pos_radius + global.NIKO_HEIGHT;
+	}
+	else{
+		var collision_pos = pos_radius;
+	}
+	
 	// check if on floor
-	on_floor = pos_radius >= global.WALL_RADIUS; //or place_meeting(x, y, obj_collidable);
+	on_floor = collision_pos >= global.WALL_RADIUS; //or place_meeting(x, y, obj_collidable);
 	
 	if(on_floor and headfirst){
+		pos_radius = collision_pos;
 		getting_up_time = 0;
-		headfirst = false;
+		set_headfirst(false);
 	}
 	
 	//check for collisions with ladders
@@ -39,12 +48,13 @@ with(obj_niko){
 	   var ledge_right = ledge[2];
 	   if(pos_angle >= ledge_left and
 	      pos_angle <= ledge_right and
-		  pos_radius - global.LEDGE_TOLERANCE <= ledge_radius and
-		  pos_radius + global.LEDGE_TOLERANCE >= ledge_radius){
+		  collision_pos - global.LEDGE_TOLERANCE <= ledge_radius and
+		  collision_pos + global.LEDGE_TOLERANCE >= ledge_radius){
 			on_ledge = true;
 			if(headfirst){
+				pos_radius = collision_pos;
 				getting_up_time = 0;
-				headfirst = false;
+				set_headfirst(false);
 			}
 	   }
 	}
