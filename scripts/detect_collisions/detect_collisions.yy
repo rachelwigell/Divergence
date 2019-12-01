@@ -1,8 +1,8 @@
 {
-    "id": "c86e59f0-665b-4c95-a14d-ee9f230ed7bf",
+    "id": "66048dc2-cf98-450a-8371-010926710293",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "handle_headfirst_logic",
+    "name": "detect_collisions",
     "IsCompatibility": false,
     "IsDnD": false
 }

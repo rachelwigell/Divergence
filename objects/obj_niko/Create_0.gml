@@ -4,3 +4,7 @@ vel_radius = 0;
 vel_angle = 0;
 headfirst = false;
 getting_up_time = -1;
+on_floor = true;
+on_ledge = false;
+on_ladder = false;
+is_falling = false;
