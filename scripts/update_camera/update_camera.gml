@@ -17,9 +17,10 @@ with(obj_niko){
 	}
 
 	var camera_radius = min(radius - CAMERA_SHIFT, global.WALL_RADIUS - CAMERA_SHIFT);
-	var camera_x = room_width/2 + dcos(angle) * camera_radius;
+	var coordinates = convert_polar(angle, camera_radius);
+	var camera_x = coordinates[0];
+	var camera_y = coordinates[1];
 	camera_x -= camera_get_view_width(view_camera[0])/2;
-	var camera_y = room_height/2 - dsin(angle) * camera_radius;
 	camera_y -= camera_get_view_height(view_camera[0])/2;
 	var camera_angle = -angle-90;
 

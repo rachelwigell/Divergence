@@ -1,12 +1,16 @@
-/// @function convert_polar()
+/// @function convert_polar(angle, radius)
+/// @param {real} angle
+/// @param {real} radius
 
-with(obj_niko){
-	//convert the sprite's polar coordinates to a cartesian x,y position
-	x = room_width/2 + dcos(pos_angle) * pos_radius;
-	y = room_height/2 - dsin(pos_angle) * pos_radius;
+var angle = argument0;
+var radius = argument1;
 
-	// calculate the sprite's angle
-	image_angle = pos_angle + 90;
-	if(headfirst) { image_angle += 180; }
-	if(getting_up_time >= 0) { image_angle += 180; image_angle -= getting_up_time; }
-}
+var coordinates = array_create(2);
+
+var x_coor = room_width/2 + dcos(angle) * radius;
+var y_coor = room_height/2 - dsin(angle) * radius;
+
+coordinates[0] = x_coor;
+coordinates[1] = y_coor;
+
+return coordinates;
