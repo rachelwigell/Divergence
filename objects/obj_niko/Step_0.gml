@@ -1,7 +1,5 @@
-var RADIUS_INCREMENT = global.WALL_RADIUS/800 * (global.fast_mode + 1);
-var ANGLE_INCREMENT = 100/global.WALL_RADIUS * (global.fast_mode + 1);
-var GRAVITY_FACTOR = global.WALL_RADIUS * 4;
-var MAX_VEL_ANGLE = 300/global.WALL_RADIUS * (global.fast_mode + 1);
+var max_vel_angle = global.CIRCUMFERENCE_INCREMENT/pos_radius*3 * (global.fast_mode + 1);
+var angle_increment = global.CIRCUMFERENCE_INCREMENT/pos_radius * (global.fast_mode + 1);
 
 var on_floor = pos_radius >= global.WALL_RADIUS or
 	place_meeting(x, y, obj_collidable);
@@ -9,8 +7,6 @@ if(on_floor and headfirst){
 	getting_up_time = 0;
 	headfirst = false;
 }
-var on_ladder = false;
-var on_ledge = false;
 
 var wall = noone;
 with(obj_wall){
@@ -18,6 +14,7 @@ with(obj_wall){
 }
 
 //check for collisions with ladders
+on_ladder = false;
 for (var i=0; i<array_length_1d(wall.ladder_locations); i++) {
    var ladder = wall.ladder_locations[i];
    var ladder_angle = ladder[0];
@@ -32,6 +29,7 @@ for (var i=0; i<array_length_1d(wall.ladder_locations); i++) {
 }
 
 //check for collisions with ledges
+on_ledge = false;
 for (var i=0; i<array_length_1d(wall.ledge_locations); i++) {
    var ledge = wall.ledge_locations[i];
    var ledge_radius = ledge[0];
@@ -69,13 +67,13 @@ var move_down = keyboard_check(vk_down) and pos_radius < global.WALL_RADIUS;
 var jump = keyboard_check_pressed(vk_space);
 	
 vel_angle = clamp(vel_angle*angle_deceleration_factor +
-	(move_right - move_left)*acceleration_control_factor*ANGLE_INCREMENT,
-	-MAX_VEL_ANGLE, MAX_VEL_ANGLE);
-pos_radius += (move_down - move_up) * RADIUS_INCREMENT*2;
-vel_radius -= jump * RADIUS_INCREMENT*5;
+	(move_right - move_left)*acceleration_control_factor*angle_increment,
+	-max_vel_angle, max_vel_angle);
+pos_radius += (move_down - move_up) * global.RADIUS_INCREMENT*2;
+vel_radius -= jump * global.RADIUS_INCREMENT*5;
 
 // apply gravity
-var gravity_force = pos_radius/GRAVITY_FACTOR;
+var gravity_force = pos_radius/global.GRAVITY_FACTOR;
 vel_radius += is_falling * gravity_force;
 
 // apply velocity
@@ -104,7 +102,7 @@ if(getting_up_time >= 0){
 	}
 }
 
-var coordinates = convert_polar(pos_angle, pos_radius, headfirst);
+var coordinates = convert_polar(pos_angle, pos_radius, headfirst, getting_up_time);
 
 // update sprite position, angle
 x = coordinates[0];

@@ -17,8 +17,8 @@ if(headfirst or getting_up_time >= 0){
 }
 if(getting_up_time >= 0){
 	angle += getting_up_time;
-	radius_increment = -radius*2/180;
-	radius += radius_increment*getting_up_time;
+	var rad_inc = -radius*2/180;
+	radius += rad_inc*getting_up_time;
 }
 
 var camera_radius = min(radius - CAMERA_SHIFT, global.WALL_RADIUS - CAMERA_SHIFT);

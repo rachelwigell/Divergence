@@ -118,7 +118,7 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "False",
+            "value": "0",
             "varName": "headfirst",
             "varType": 3
         },
@@ -133,8 +133,36 @@
             "rangeMin": 0,
             "resourceFilter": 1023,
             "value": "-1",
-            "varName": "getting_up_time",
+            "varName": "getting_up_timer",
             "varType": 0
+        },
+        {
+            "id": "5bb4f14c-5711-4772-9b30-605f9f44837d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "on_ledge",
+            "varType": 3
+        },
+        {
+            "id": "326a7862-0827-4547-bc99-ce5be0afba04",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "on_ladder",
+            "varType": 3
         }
     ],
     "solid": false,

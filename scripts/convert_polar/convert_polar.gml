@@ -1,4 +1,4 @@
-/// @function convert_polar(angle, radius, passed_axis, getting_up_time)
+/// @function convert_polar(angle, radius, headfirst, getting_up_time)
 /// @param {real} angle
 /// @param {real} radius
 /// @param {boolean} headfirst
@@ -7,6 +7,7 @@
 var angle = argument0;
 var radius = argument1;
 var headfirst = argument2;
+var getting_up_time = argument3;
 
 //convert the sprite's polar coordinates to a cartesian x,y position
 var sprite_x = room_width/2 + dcos(angle) * radius;
