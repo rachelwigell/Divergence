@@ -107,6 +107,34 @@
             "value": "0",
             "varName": "vel_angle",
             "varType": 0
+        },
+        {
+            "id": "1888ecd9-00fa-40cc-b5ce-3e9bacf2d73e",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "False",
+            "varName": "headfirst",
+            "varType": 3
+        },
+        {
+            "id": "3e060650-1524-4f66-8488-82f9fd26903f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-1",
+            "varName": "getting_up_time",
+            "varType": 0
         }
     ],
     "solid": false,

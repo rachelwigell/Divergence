@@ -1,11 +1,25 @@
-/// @function update_camera(angle, radius)
+/// @function update_camera(angle, radius, headfirst, getting_up_time)
 /// @param {real} angle
 /// @param {real} radius
+/// @param {boolean} headfirst;
+/// @param {real} getting_up_time;
 
 var CAMERA_SHIFT = global.WALL_RADIUS/4;
 
 var angle = argument0;
 var radius = argument1;
+var headfirst = argument2;
+var getting_up_time = argument3;
+
+if(headfirst or getting_up_time >= 0){
+	angle += 180;
+	radius *= -1;
+}
+if(getting_up_time >= 0){
+	angle += getting_up_time;
+	radius_increment = -radius*2/180;
+	radius += radius_increment*getting_up_time;
+}
 
 var camera_radius = min(radius - CAMERA_SHIFT, global.WALL_RADIUS - CAMERA_SHIFT);
 var camera_x = room_width/2 + dcos(angle) * camera_radius;

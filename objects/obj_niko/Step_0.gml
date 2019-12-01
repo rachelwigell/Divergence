@@ -1,10 +1,14 @@
-var RADIUS_INCREMENT = global.WALL_RADIUS/800;
-var ANGLE_INCREMENT = 100/global.WALL_RADIUS;
+var RADIUS_INCREMENT = global.WALL_RADIUS/800 * (global.fast_mode + 1);
+var ANGLE_INCREMENT = 100/global.WALL_RADIUS * (global.fast_mode + 1);
 var GRAVITY_FACTOR = global.WALL_RADIUS * 4;
-var MAX_VEL_ANGLE = .5;
+var MAX_VEL_ANGLE = 300/global.WALL_RADIUS * (global.fast_mode + 1);
 
 var on_floor = pos_radius >= global.WALL_RADIUS or
 	place_meeting(x, y, obj_collidable);
+if(on_floor and headfirst){
+	getting_up_time = 0;
+	headfirst = false;
+}
 var on_ladder = false;
 var on_ledge = false;
 
@@ -38,6 +42,10 @@ for (var i=0; i<array_length_1d(wall.ledge_locations); i++) {
 	  pos_radius - global.LEDGE_TOLERANCE <= ledge_radius and
 	  pos_radius + global.LEDGE_TOLERANCE >= ledge_radius){
 		on_ledge = true;
+		if(headfirst){
+			getting_up_time = 0;
+			headfirst = false;
+		}
    }
 }
 
@@ -73,7 +81,30 @@ vel_radius += is_falling * gravity_force;
 // apply velocity
 pos_radius = min(pos_radius+vel_radius, global.WALL_RADIUS);
 pos_angle = pos_angle+vel_angle;
-var coordinates = convert_polar(pos_angle, pos_radius);
+
+// keep angle within 0-360 and radius within 0-WALL_RADIUS
+if(pos_radius < 0){
+	pos_radius *= -1;
+	pos_angle += 180;
+	vel_radius *= -1;
+	headfirst = true;
+}
+if(pos_angle >= 360){
+	pos_angle -= 360;
+}
+else if(pos_angle < 0){
+	pos_angle += 360;
+}
+
+// increment getting_up_time as needed
+if(getting_up_time >= 0){
+	getting_up_time++;
+	if(getting_up_time > 180){
+		getting_up_time = -1;
+	}
+}
+
+var coordinates = convert_polar(pos_angle, pos_radius, headfirst);
 
 // update sprite position, angle
 x = coordinates[0];
