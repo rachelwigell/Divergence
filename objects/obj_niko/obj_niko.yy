@@ -191,6 +191,20 @@
             "value": "0",
             "varName": "is_falling",
             "varType": 3
+        },
+        {
+            "id": "82c31643-0eb6-4585-822d-239bfaab6351",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-1",
+            "varName": "fall_stun_time",
+            "varType": 0
         }
     ],
     "solid": false,

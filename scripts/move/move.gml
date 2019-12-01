@@ -24,8 +24,11 @@ with(obj_niko){
 		pos_angle += 360;
 	}
 	
-	// increment getting_up_time as needed
-	if(getting_up_time >= 0){
+	// increment fall_stun_time/getting_up_time as needed
+	if(fall_stun_time > 0){
+		fall_stun_time--;
+	}
+	else if(getting_up_time >= 0){
 		getting_up_time++;
 		if(getting_up_time > 180){
 			getting_up_time = -1;

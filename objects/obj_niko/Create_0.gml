@@ -8,3 +8,4 @@ on_floor = true;
 on_ledge = false;
 on_ladder = false;
 is_falling = false;
+fall_stun_time = -1;

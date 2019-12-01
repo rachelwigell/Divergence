@@ -4,7 +4,7 @@ with(obj_niko){
 	var max_vel_angle = global.CIRCUMFERENCE_INCREMENT/pos_radius*3 * (global.fast_mode + 1);
 	var angle_increment = global.CIRCUMFERENCE_INCREMENT/pos_radius * (global.fast_mode + 1);
 
-	var can_move = getting_up_time < 0;
+	var can_move = fall_stun_time < 0 and getting_up_time < 0;
 	var move_left = keyboard_check(vk_left) and can_move;
 	var move_right = keyboard_check(vk_right) and can_move;
 	var move_up = keyboard_check(vk_up) and on_ladder and can_move;

@@ -10,3 +10,5 @@ global.fast_mode = false;
 global.RADIUS_INCREMENT = global.WALL_RADIUS/800;
 global.GRAVITY_FACTOR = global.WALL_RADIUS * 4;
 global.CIRCUMFERENCE_INCREMENT = 100;
+
+global.FALL_STUN_FACTOR = 10;

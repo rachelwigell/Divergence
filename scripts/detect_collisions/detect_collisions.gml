@@ -20,7 +20,6 @@ with(obj_niko){
 	
 	if(on_floor and headfirst){
 		pos_radius = collision_pos;
-		getting_up_time = 0;
 		set_headfirst(false);
 	}
 	
@@ -53,7 +52,6 @@ with(obj_niko){
 			on_ledge = true;
 			if(headfirst){
 				pos_radius = collision_pos;
-				getting_up_time = 0;
 				set_headfirst(false);
 			}
 	   }
