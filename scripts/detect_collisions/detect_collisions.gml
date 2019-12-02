@@ -18,13 +18,18 @@ with(obj_niko){
 	// check if on floor
 	on_floor = collision_pos >= global.WALL_RADIUS; //or place_meeting(x, y, obj_collidable);
 	
+	if(on_floor){
+		on_ladder = false;
+	}
+	
 	if(on_floor and headfirst){
 		pos_radius = collision_pos;
 		set_headfirst(false);
 	}
 	
 	//check for collisions with ladders
-	on_ladder = false;
+	var touching_ladder = false;
+	touched_ladder_angle = -1;
 	for (var i=0; i<array_length_1d(wall.ladder_locations); i++) {
 	   var ladder = wall.ladder_locations[i];
 	   var ladder_angle = ladder[0];
@@ -34,9 +39,11 @@ with(obj_niko){
 	      pos_angle + global.LADDER_WIDTH/2 >= ladder_angle and
 		  pos_radius <= ladder_bottom and
 		  pos_radius >= ladder_top){
-			on_ladder = true;
+			touching_ladder = true;
+			touched_ladder_angle = ladder_angle;
 	   }
 	}
+	if(not touching_ladder) { on_ladder = false; }
 
 	//check for collisions with ledges
 	on_ledge = false;
@@ -56,8 +63,4 @@ with(obj_niko){
 			}
 	   }
 	}
-	
-	// determine if falling and stop vertical velocity if not
-	is_falling = not on_floor and not on_ladder and not on_ledge;
-	vel_radius *= is_falling;
 }

@@ -205,6 +205,20 @@
             "value": "-1",
             "varName": "fall_stun_time",
             "varType": 0
+        },
+        {
+            "id": "f6e683ea-e8c7-421b-9bab-fda401b2dbbf",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "-1",
+            "varName": "touched_ladder_angle",
+            "varType": 0
         }
     ],
     "solid": false,
