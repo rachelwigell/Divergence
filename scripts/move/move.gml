@@ -7,8 +7,7 @@ with(obj_niko){
 	vel_radius += is_falling * gravity_force;
 
 	// apply velocity
-	pos_radius = min(pos_radius+vel_radius, global.WALL_RADIUS);
-	pos_angle = pos_angle+vel_angle;
+	apply_velocity()
 
 	// keep angle within 0-360 and radius within 0-WALL_RADIUS
 	if(pos_radius < 0){

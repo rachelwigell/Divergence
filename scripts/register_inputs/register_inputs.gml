@@ -35,5 +35,5 @@ with(obj_niko){
 		(move_right - move_left)*acceleration_control_factor*angle_increment,
 		-max_vel_angle, max_vel_angle);
 	pos_radius += (move_down - move_up) * global.RADIUS_INCREMENT*2;
-	vel_radius -= jump * global.RADIUS_INCREMENT*5;
+	vel_radius -= jump * global.RADIUS_INCREMENT*global.JUMP_FACTOR;
 }
