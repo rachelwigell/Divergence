@@ -8,17 +8,14 @@ with(obj_niko){
 	var fall_stunned = fall_stun_time > 0;
 	var getting_up = getting_up_time >= 0;
 	
-	if(headfirst){
+	if(headfirst or fall_stunned or getting_up){
 		var camera_radius = radius + CAMERA_SHIFT;
-	}
-	else if (fall_stunned or getting_up){
-		var camera_radius = radius + CAMERA_SHIFT - global.NIKO_HEIGHT;
 	}
 	else{
 		var camera_radius = radius - CAMERA_SHIFT;
 	}
 	if(getting_up){
-		var rad_inc = (CAMERA_SHIFT*2 - global.NIKO_HEIGHT)/180;
+		var rad_inc = (CAMERA_SHIFT*2)/180;
 		camera_radius -= rad_inc*getting_up_time;
 	}
 

@@ -219,6 +219,20 @@
             "value": "-1",
             "varName": "touched_ladder_angle",
             "varType": 0
+        },
+        {
+            "id": "b4794c2a-0c3c-4789-bfe0-3c3b26f970bc",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "sprite_shift_time",
+            "varType": 0
         }
     ],
     "solid": false,
