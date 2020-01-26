@@ -16,7 +16,7 @@ with(obj_niko){
 	}
 	
 	// check if on floor
-	on_floor = collision_pos >= global.WALL_RADIUS; //or place_meeting(x, y, obj_collidable);
+	on_floor = collision_pos >= global.WALL_RADIUS; 
 	
 	if(on_floor){
 		on_ladder = false;
