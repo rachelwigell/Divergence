@@ -13,3 +13,5 @@ global.GRAVITY_FACTOR = global.WALL_RADIUS * 4;
 global.JUMP_FACTOR = 5;
 
 global.FALL_STUN_FACTOR = 10;
+
+global.platforming_scene = true;
