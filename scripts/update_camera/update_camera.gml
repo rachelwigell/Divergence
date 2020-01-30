@@ -1,6 +1,6 @@
 /// @function update_camera()
 
-var CAMERA_SHIFT = global.WALL_RADIUS/4;
+var CAMERA_SHIFT = global.VIEWPORT_SIZE/3;
 
 with(obj_niko){
 	var angle = pos_angle;

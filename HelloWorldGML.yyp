@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "82aea079-8a15-4ada-b74c-33cb308a9b5c",
+            "Value": {
+                "id": "96258683-d88a-4c7e-bfe1-2580d61de0de",
+                "resourcePath": "sprites\/spr_ring_big\/spr_ring_big.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "8487dee7-3dd5-4fb6-ba34-1e358a84c9eb",
             "Value": {
                 "id": "653aabae-f714-49f4-a0cf-5e14c82c8f51",

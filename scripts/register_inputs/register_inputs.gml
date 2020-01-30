@@ -46,6 +46,6 @@ with(obj_niko){
 	vel_angle = clamp(vel_angle*angle_deceleration_factor +
 		(move_right - move_left)*acceleration_control_factor*angle_increment,
 		-max_vel_angle, max_vel_angle);
-	pos_radius += (move_down - move_up) * global.RADIUS_INCREMENT*2;
-	vel_radius -= jump * global.RADIUS_INCREMENT*global.JUMP_FACTOR;
+	pos_radius += (move_down - move_up) * global.LADDER_SPEED;
+	vel_radius -= jump*global.JUMP_FACTOR;
 }
