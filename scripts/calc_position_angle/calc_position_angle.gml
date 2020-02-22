@@ -8,8 +8,6 @@ with(obj_niko){
 
 	// calculate the sprite's angle
 	image_angle = pos_angle + 90;
-	if(global.platforming_scene){
-		if(headfirst) { image_angle += 180; }
-		if(getting_up_time >= 0) { image_angle += 180; image_angle -= getting_up_time; }
-	}
+	if(headfirst) { image_angle += 180; }
+	if(getting_up_time >= 0) { image_angle += 180; image_angle -= getting_up_time; }
 }

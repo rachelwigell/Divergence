@@ -4,31 +4,20 @@ with(obj_niko){
 	var max_vel_angle = global.CIRCUMFERENCE_INCREMENT/pos_radius*3 * (global.fast_mode + 1);
 	var angle_increment = global.CIRCUMFERENCE_INCREMENT/pos_radius * (global.fast_mode + 1);
 	
-	if(global.platforming_scene){
-		var can_move = fall_stun_time < 0 and getting_up_time < 0;
-		var touching_ladder = touched_ladder_angle != -1;
-		var move_left = keyboard_check(vk_left) and not on_ladder and can_move;
-		var move_right = keyboard_check(vk_right) and not on_ladder and can_move;
-		var move_up = keyboard_check(vk_up) and touching_ladder and can_move;
-		var move_down = keyboard_check(vk_down) and touching_ladder and not on_floor and can_move;
-		var jump = keyboard_check_pressed(vk_space) and (on_floor or on_ledge);
+	var can_move = fall_stun_time < 0 and getting_up_time < 0;
+	var touching_ladder = touched_ladder_angle != -1;
+	var move_left = keyboard_check(vk_left) and not on_ladder and can_move;
+	var move_right = keyboard_check(vk_right) and not on_ladder and can_move;
+	var move_up = keyboard_check(vk_up) and touching_ladder and can_move;
+	var move_down = keyboard_check(vk_down) and touching_ladder and not on_floor and can_move;
+	var jump = keyboard_check_pressed(vk_space) and (on_floor or on_ledge);
 	
-		if(move_up or move_down){
-			on_ladder = true;
-			pos_angle = touched_ladder_angle;
-		}
-		
-		is_falling = not on_floor and not on_ladder and not on_ledge;
+	if(move_up or move_down){
+		on_ladder = true;
+		pos_angle = touched_ladder_angle;
 	}
-	else{
-		var move_left = keyboard_check(vk_left);
-		var move_right = keyboard_check(vk_right);
-		var move_up = false;
-		var move_down = false;
-		var jump = keyboard_check_pressed(vk_space) and on_floor;
 		
-		is_falling = not on_floor;
-	}
+	is_falling = not on_floor and not on_ladder and not on_ledge;
 	
 	// stop vertical velocity if not falling
 	vel_radius *= is_falling;

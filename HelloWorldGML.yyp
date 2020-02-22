@@ -98,7 +98,7 @@
             "Key": "1aa7d9a3-d333-4f5e-8da4-fe1dd478c633",
             "Value": {
                 "id": "0e02a498-9c47-4592-8067-ce12d73112be",
-                "resourcePath": "objects\/obj_niko\/obj_niko.yy",
+                "resourcePath": "objects\/obj_platforming_niko\/obj_platforming_niko.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "7456353a-0105-4b87-b0be-d0dc28710a37",
+            "Value": {
+                "id": "bd635c26-7de0-4fbd-a008-60ba677f8fb4",
+                "resourcePath": "objects\/obj_niko\/obj_niko.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "77c4feb5-e811-4fa0-aca6-758ec76a670f",
             "Value": {
                 "id": "f135e977-0950-4085-95ee-44888bd0230e",
@@ -644,6 +652,14 @@
                 "id": "8536eef8-cb1e-410c-a898-8e346d31e628",
                 "resourcePath": "sprites\/spr_wall_1_0\/spr_wall_1_0.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a43dc918-0d47-4321-84d7-958019aca8ad",
+            "Value": {
+                "id": "7dff5135-c45f-4fd5-8ff2-f5a76790cc18",
+                "resourcePath": "views\/a43dc918-0d47-4321-84d7-958019aca8ad.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
