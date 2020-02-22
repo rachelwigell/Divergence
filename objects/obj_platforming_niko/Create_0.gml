@@ -1,6 +1,5 @@
 event_inherited();
 
-on_floor = true;
 on_ledge = false;
 touched_ladder_angle = -1;
 on_ladder = false;

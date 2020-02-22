@@ -7,7 +7,7 @@ with(obj_niko){
 	var radius = pos_radius;
 	var camera_radius = radius - CAMERA_SHIFT;
 	
-	if(global.platforming_scene){
+	with(obj_platforming_niko){
 		var fall_stunned = fall_stun_time > 0;
 		var getting_up = getting_up_time >= 0;
 	
@@ -27,7 +27,7 @@ with(obj_niko){
 	camera_y -= camera_get_view_height(view_camera[0])/2;
 	var camera_angle = -angle-90;
 	
-	if(global.platforming_scene){
+	with(obj_platforming_niko){
 		if(headfirst or fall_stunned or getting_up){
 			camera_angle += 180;
 		}

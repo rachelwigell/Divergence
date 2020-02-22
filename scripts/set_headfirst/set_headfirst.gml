@@ -4,7 +4,7 @@
 
 var headfirst_val = argument0;
 
-with(obj_niko){
+with(obj_platforming_niko){
 	was_headfirst = headfirst;
 	headfirst = headfirst_val;
 	if(was_headfirst != headfirst) {

@@ -13,6 +13,16 @@
             "enumb": 0,
             "eventtype": 0,
             "m_owner": "7456353a-0105-4b87-b0be-d0dc28710a37"
+        },
+        {
+            "id": "95814c45-a1d9-42d2-bfe9-2e0e9f8e3b08",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "7456353a-0105-4b87-b0be-d0dc28710a37"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -87,6 +97,20 @@
             "value": "0",
             "varName": "vel_angle",
             "varType": 0
+        },
+        {
+            "id": "8b66fdf4-d0d4-44bc-846f-94929917835d",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "True",
+            "varName": "on_floor",
+            "varType": 3
         }
     ],
     "solid": false,
