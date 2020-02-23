@@ -9,11 +9,8 @@ global.VIEWPORT_SIZE = 800;
 global.fast_mode = false;
 
 global.LADDER_SPEED = global.NIKO_HEIGHT/30;
-global.CIRCUMFERENCE_INCREMENT = global.NIKO_HEIGHT/1.5;
+global.CIRCUMFERENCE_INCREMENT = global.NIKO_HEIGHT*2;
 global.GRAVITY_FACTOR = 8000;
 global.JUMP_FACTOR = global.NIKO_HEIGHT/12;
 global.MAX_JUMP_CHARGE = 10;
-
 global.FALL_STUN_FACTOR = 10;
-
-global.platforming_scene = true;

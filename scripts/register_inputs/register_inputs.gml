@@ -1,7 +1,7 @@
 /// @function register_inputs()
 
 with(obj_niko){
-	var max_vel_angle = global.CIRCUMFERENCE_INCREMENT/pos_radius*3 * (global.fast_mode + 1);
+	var max_vel_angle = global.CIRCUMFERENCE_INCREMENT/pos_radius * (global.fast_mode + 1);
 	var angle_increment = global.CIRCUMFERENCE_INCREMENT/pos_radius * (global.fast_mode + 1);
 	
 	var move_left = keyboard_check(vk_left);
