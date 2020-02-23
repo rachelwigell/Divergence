@@ -6,8 +6,6 @@ with(obj_niko){
 	// apply gravity
 	var gravity_force = pos_radius/global.GRAVITY_FACTOR;
 	vel_radius += is_falling * gravity_force;
-	
-	show_debug_message(is_falling);
 
 	// apply velocity
 	apply_velocity();

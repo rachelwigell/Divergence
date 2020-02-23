@@ -14,7 +14,8 @@ with(obj_niko){
 	// hit the floor if it's in the way
 	if(dest_radius > global.WALL_RADIUS) {
 		dest_radius = global.WALL_RADIUS;
-		on_floor = true;	
+		on_floor = true;
+		jump_charge = 1;
 	}
 	
 	with(obj_platforming_niko){
@@ -26,11 +27,12 @@ with(obj_niko){
 				var ledge_left = ledge[1];
 				var ledge_right = ledge[2];  
 				var ledge_intersect_angle = ((ledge_radius*dest_angle) - (ledge_radius*pos_angle) - (pos_radius*dest_angle) + (dest_radius*pos_angle)) / (dest_radius-pos_radius);
-				if(value_between(ledge_radius, pos_radius, dest_radius)){  
-					if(value_between(ledge_intersect_angle, ledge_left, ledge_right)){
+				if(value_between(ledge_radius, pos_radius, dest_radius, false)){  
+					if(value_between(ledge_intersect_angle, ledge_left, ledge_right, true)){
 						dest_radius = ledge_radius;
 						dest_angle = ledge_intersect_angle;
 						on_ledge = true;
+						jump_charge = 1;
 						set_headfirst(false);
 						break;
 					}

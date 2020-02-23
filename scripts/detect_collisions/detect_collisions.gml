@@ -3,6 +3,9 @@
 with(obj_niko){
 	// check if on floor
 	on_floor = pos_radius >= global.WALL_RADIUS; 
+	if(on_floor){
+		jump_charge = 1;
+	}
 
 	with(obj_platforming_niko){	
 		var wall = noone;
@@ -45,9 +48,9 @@ with(obj_niko){
 			var ledge_right = ledge[2];
 			if(pos_angle >= ledge_left and
 			    pos_angle <= ledge_right and
-				pos_radius - global.LEDGE_TOLERANCE <= ledge_radius and
-				pos_radius + global.LEDGE_TOLERANCE >= ledge_radius){
+				pos_radius == ledge_radius){
 				on_ledge = true;
+				jump_charge = 1;
 				if(headfirst){
 					pos_radius = pos_radius;
 					set_headfirst(false);

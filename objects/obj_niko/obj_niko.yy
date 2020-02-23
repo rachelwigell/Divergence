@@ -111,6 +111,20 @@
             "value": "True",
             "varName": "on_floor",
             "varType": 3
+        },
+        {
+            "id": "c0703b03-32cf-4a86-8f61-815def8e0f65",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "jump_charge",
+            "varType": 0
         }
     ],
     "solid": false,
