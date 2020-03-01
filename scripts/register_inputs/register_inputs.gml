@@ -29,7 +29,7 @@ with(obj_niko){
 	}
 	
 	// charge up the jump if the spacebar is held
-	if(jump_charge > 0 and keyboard_check(vk_space) and jump_charge < global.MAX_JUMP_CHARGE){
+	if(can_move and jump_charge > 0 and keyboard_check(vk_space) and jump_charge < global.MAX_JUMP_CHARGE){
 		jump_charge++;
 	}
 	else{
@@ -42,7 +42,7 @@ with(obj_niko){
 	// limit control over the character while falling
 	if is_falling{
 		var angle_deceleration_factor = 1;
-		var acceleration_control_factor = .3;
+		var acceleration_control_factor = .03;
 	}
 	else{
 		var angle_deceleration_factor = .8;
