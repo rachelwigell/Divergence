@@ -10,6 +10,5 @@ with(obj_niko){
 	image_angle = pos_angle + 90;
 	with(obj_platforming_niko){
 		if(headfirst) { image_angle += 180; }
-		if(getting_up_time >= 0) { image_angle += 180; image_angle -= getting_up_time; }
 	}
 }

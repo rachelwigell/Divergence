@@ -7,5 +7,4 @@ is_falling = false;
 
 headfirst = false;
 fall_stun_time = -1;
-getting_up_time = -1;
 sprite_shift_time = 0;

@@ -3,7 +3,7 @@ var ROOM_CIRCUMFERENCE = pi * global.WALL_RADIUS * 2;
 var LADDER_WIDTH_PIXELS = 70;
 global.LADDER_WIDTH = LADDER_WIDTH_PIXELS/ROOM_CIRCUMFERENCE * 360;
 //global.LEDGE_TOLERANCE = 0;
-global.NIKO_HEIGHT = 127;
+global.NIKO_HEIGHT = 128;
 global.VIEWPORT_SIZE = 800;
 
 global.fast_mode = false;

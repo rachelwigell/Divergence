@@ -12,7 +12,7 @@ with(obj_niko){
 	is_falling = not on_floor;
 	
 	with(obj_platforming_niko){		
-		var can_move = fall_stun_time < 0 and getting_up_time < 0;
+		var can_move = fall_stun_time < 0;
 		var touching_ladder = touched_ladder_angle != -1;
 		
 		var move_left = keyboard_check(vk_left) and not on_ladder and can_move;

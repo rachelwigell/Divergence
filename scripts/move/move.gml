@@ -25,20 +25,15 @@ with(obj_niko){
 	}
 	
 	with(obj_platforming_niko){
-		// increment fall_stun_time/getting_up_time as needed
+		// increment fall_stun_time as needed
 		if(fall_stun_time >= 0){
 			fall_stun_time--;
 		}
-		else if(getting_up_time >= 0){
-			getting_up_time++;
-			if(getting_up_time > 180){
-				getting_up_time = -1;
-			}
-		}
-	
+		
 		// shift sprite as needed
 		if(sprite_shift_time > 0){
-			sprite_set_offset(spr_nikofront, 64, sprite_shift_time-1)
+			var shift_increment = global.NIKO_HEIGHT/180;
+			sprite_set_offset(spr_nikofront, global.NIKO_HEIGHT/2, shift_increment*sprite_shift_time);
 			sprite_shift_time -= 1;
 		}
 	}
