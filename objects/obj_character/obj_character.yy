@@ -1,44 +1,34 @@
 {
-    "id": "c3103f7a-8500-4ff2-8005-91b04d2c9213",
+    "id": "1d062a3c-9165-4a8d-9c58-afffe6025eef",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_game",
+    "name": "obj_character",
     "eventList": [
         {
-            "id": "12ecdfec-b41d-4095-b408-40bea932cbad",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "c3103f7a-8500-4ff2-8005-91b04d2c9213"
-        },
-        {
-            "id": "d01ef25e-d206-4800-b6ec-931a680dd4e1",
+            "id": "06d5ff87-a068-4df2-9f27-0f1f7b8b7c5f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "c3103f7a-8500-4ff2-8005-91b04d2c9213"
+            "m_owner": "1d062a3c-9165-4a8d-9c58-afffe6025eef"
         },
         {
-            "id": "85bd9f1e-779b-4974-8f07-4d930c41e821",
+            "id": "72137c66-a2d1-4c40-bf2b-21a20d5bb123",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 64,
-            "eventtype": 8,
-            "m_owner": "c3103f7a-8500-4ff2-8005-91b04d2c9213"
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "1d062a3c-9165-4a8d-9c58-afffe6025eef"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
-    "persistent": true,
+    "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,
     "physicsFriction": 0.2,
@@ -53,7 +43,7 @@
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "c615d553-ef40-484e-b2fb-59495550196e",
+            "id": "a6777281-3991-4ff7-b35d-cc20803dfe66",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -62,9 +52,23 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "",
-            "varName": "dialogue",
-            "varType": 2
+            "value": "0",
+            "varName": "pos_radius",
+            "varType": 0
+        },
+        {
+            "id": "ab6975d9-67e0-414b-8cce-3b6c8cdcfc76",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "pos_angle",
+            "varType": 0
         }
     ],
     "solid": false,

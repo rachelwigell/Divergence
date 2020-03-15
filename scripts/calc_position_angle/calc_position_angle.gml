@@ -1,6 +1,6 @@
 /// @function calc_position_angle()
 
-with(obj_niko){
+with(obj_character){
 	//convert the sprite's polar coordinates to a cartesian x,y position
 	var coordinates = convert_polar(pos_angle, pos_radius);
 	x = coordinates[0];

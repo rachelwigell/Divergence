@@ -7,7 +7,7 @@
         "e9d51269-3b13-47f4-8254-d92edcb30f94"
     ],
     "filterType": "GMSprite",
-    "folderName": "Characters",
+    "folderName": "Overworld Characters",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

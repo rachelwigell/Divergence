@@ -8,6 +8,7 @@ with(obj_niko){
 	var move_right = keyboard_check(vk_right);
 	var move_up = false;
 	var move_down = false;
+	var can_move = true;
 	
 	is_falling = not on_floor;
 	
