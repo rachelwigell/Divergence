@@ -65,6 +65,34 @@
             "value": "",
             "varName": "dialogue",
             "varType": 2
+        },
+        {
+            "id": "4050d73d-2805-4e87-a7c7-30709f233018",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "1400",
+            "varName": "game_width",
+            "varType": 0
+        },
+        {
+            "id": "1bdcecf7-8214-4400-8fda-aa12ca80511f",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "700",
+            "varName": "game_height",
+            "varType": 0
         }
     ],
     "solid": false,

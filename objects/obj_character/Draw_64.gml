@@ -1,6 +1,3 @@
-if(keyboard_check_pressed(vk_space)){
-	show_debug_message("also here");
-}
 if(current_dialogue != noone){
 	display_dialogue(current_dialogue, dialogue_step);
 	var current_dialogue_length = string_length(current_dialogue[0]);
