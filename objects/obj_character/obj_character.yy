@@ -121,6 +121,20 @@
             "value": "0",
             "varName": "dialogue_step",
             "varType": 0
+        },
+        {
+            "id": "65d50c92-c629-444a-bebc-3512dda46348",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "",
+            "varName": "name",
+            "varType": 2
         }
     ],
     "solid": false,

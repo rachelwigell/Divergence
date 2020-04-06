@@ -2,7 +2,7 @@
     "id": "e9d51269-3b13-47f4-8254-d92edcb30f94",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_nikofront",
+    "name": "spr_niko_front",
     "For3D": false,
     "HTile": false,
     "VTile": false,

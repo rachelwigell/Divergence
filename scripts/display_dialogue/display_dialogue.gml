@@ -1,11 +1,11 @@
-var dialogue_data = argument0;
-var dialogue_step = argument1;
+var speaking_character = argument0;
+var dialogue_data = argument1;
+var dialogue_step = argument2;
 if(dialogue_data == noone){
 	return;
 }
 var dialogue = string_copy(dialogue_data[0], 0, dialogue_step);
-var speaking_character = dialogue_data[1];
-var portrait = dialogue_data[2];
+var portrait = asset_get_index("spr_portrait_" + string_lower(speaking_character) + "_" + dialogue_data[1]);
 
 var TEXTBOX_BUFFER = 20;
 var SCREEN_WIDTH = camera_get_view_width(view_camera[0]);

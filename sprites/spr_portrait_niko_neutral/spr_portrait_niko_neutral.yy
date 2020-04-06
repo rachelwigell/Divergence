@@ -2,7 +2,7 @@
     "id": "f1d76e63-3565-4d1f-a341-d48481961aef",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_niko_portrait_neutral",
+    "name": "spr_portrait_niko_neutral",
     "For3D": false,
     "HTile": false,
     "VTile": false,

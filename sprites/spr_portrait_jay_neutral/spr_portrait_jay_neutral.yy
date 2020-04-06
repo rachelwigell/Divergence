@@ -2,7 +2,7 @@
     "id": "f02b2346-2b44-4179-8204-be37144f0b3f",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_jay_portrait_neutral",
+    "name": "spr_portrait_jay_neutral",
     "For3D": false,
     "HTile": false,
     "VTile": false,

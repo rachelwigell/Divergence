@@ -1,5 +1,5 @@
 if(current_dialogue != noone){
-	display_dialogue(current_dialogue, dialogue_step);
+	display_dialogue(name, current_dialogue, dialogue_step);
 	var current_dialogue_length = string_length(current_dialogue[0]);
 	dialogue_step = min(current_dialogue_length, dialogue_step+1);
 	global.freeze_movement = true;
